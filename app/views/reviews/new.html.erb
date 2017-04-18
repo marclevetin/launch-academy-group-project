@@ -1,0 +1,13 @@
+<h1>Reviews New page</h1>
+
+<%= form_for [@user, @review] do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :body %>
+  <%= f.text_area :body %>
+  <%= f.label :image_path %>
+  <%= f.text_field :image_path %>
+
+  <%= f.submit %>
+
+<% end %>
