@@ -31,14 +31,6 @@ class ReviewsController < ApplicationController
     @review = Review.find(params[:id])
   end
 
-  def update
-
-  end
-
-  def destroy
-
-  end
-
   private
 
   def review_params
