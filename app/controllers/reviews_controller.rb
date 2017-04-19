@@ -37,8 +37,7 @@ class ReviewsController < ApplicationController
     params.require(:review).permit(
       :title,
       :body,
-      :image_path,
+      :image_path
     )
   end
-
 end

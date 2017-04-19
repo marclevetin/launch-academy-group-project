@@ -5,8 +5,12 @@ feature "Reviews" do
   context "Walking through needed CRUD actions" do
 
     scenario "Review page shows correct content" do
-      Sparky = User.create!(name:'Sparky', email:'sparky@gmail.com',
-        encrypted_password: 'w', role: 'a')
+      Sparky = User.create!(
+        name:'Sparky',
+        email:'sparky@gmail.com',
+        encrypted_password: 'w',
+        role: 'a'
+        )
 
       visit user_reviews_path(Sparky)
 
@@ -14,14 +18,19 @@ feature "Reviews" do
     end
 
     scenario "New Review is added successfully" do
-      Sparky = User.create!(name:'Sparky', email:'sparky@gmail.com',
-        encrypted_password: 'w', role: 'a')
+      Sparky = User.create!(
+        name:'Sparky',
+        email:'sparky@gmail.com',
+        encrypted_password: 'w',
+        role: 'a'
+        )
 
       visit new_user_review_path(Sparky)
 
       fill_in "title", with: "Denver omelette review"
       fill_in "body", with: "This omelette is GOOD!"
-      fill_in "image_path", with: "http://www.seriouseats.com/recipes/assets_c/2011/05/20110511-127355-dinner-tonight-denver-omelet-thumb-625xauto-159404.jpg"
+      fill_in "image_path",
+      with: "http://www.seriouseats.com/recipes/assets_c/2011/05/20110511-127355-dinner-tonight-denver-omelet-thumb-625xauto-159404.jpg"
 
       click_button "Create Review"
 
@@ -31,8 +40,12 @@ feature "Reviews" do
     end
 
     scenario "New Review is NOT added successfully" do
-      Sparky = User.create!(name:'Sparky', email:'sparky@gmail.com',
-        encrypted_password: 'w', role: 'a')
+      Sparky = User.create!(
+        name:'Sparky',
+        email:'sparky@gmail.com',
+        encrypted_password: 'w',
+        role: 'a'
+        )
 
       visit new_user_review_path(Sparky)
 
