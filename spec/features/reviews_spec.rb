@@ -19,18 +19,18 @@ feature "Reviews" do
 
     scenario "New Review is added successfully" do
       Sparky = User.create!(
-        name:'Sparky',
-        email:'sparky@gmail.com',
+        name: 'Sparky',
+        email: 'sparky@gmail.com',
         encrypted_password: 'w',
         role: 'a'
-        )
+      )
 
       visit new_user_review_path(Sparky)
 
       fill_in "title", with: "Denver omelette review"
       fill_in "body", with: "This omelette is GOOD!"
       fill_in "image_path",
-      with: "http://www.seriouseats.com/recipes/assets_c/2011/05/20110511-127355-dinner-tonight-denver-omelet-thumb-625xauto-159404.jpg"
+        with: "http://www.seriouseats.com/recipes/assets_c/2011/05/20110511-127355-dinner-tonight-denver-omelet-thumb-625xauto-159404.jpg"
 
       click_button "Create Review"
 
@@ -41,11 +41,11 @@ feature "Reviews" do
 
     scenario "New Review is NOT added successfully" do
       Sparky = User.create!(
-        name:'Sparky',
-        email:'sparky@gmail.com',
+        name: 'Sparky',
+        email: 'sparky@gmail.com',
         encrypted_password: 'w',
         role: 'a'
-        )
+      )
 
       visit new_user_review_path(Sparky)
 
