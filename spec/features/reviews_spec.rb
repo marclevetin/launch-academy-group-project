@@ -20,7 +20,7 @@ feature "Reviews" do
       fill_in "title", with: "Denver omelette review"
       fill_in "body", with: "This omelette is GOOD!"
       fill_in "image_path",
-      with: "http://www.seriouseats.com/recipes/assets_c/2011/05/20110511-127355-dinner-tonight-denver-omelet-thumb-625xauto-159404.jpg"
+        with: "http://www.seriouseats.com/recipes/assets_c/2011/05/20110511-127355-dinner-tonight-denver-omelet-thumb-625xauto-159404.jpg"
 
       click_button "Create Review"
 
