@@ -7,6 +7,8 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'foundation-rails'
+gem 'devise'
+gem 'simple_form'
 
 group :development do
   gem 'listen', '~> 3.0.5'
@@ -22,6 +24,10 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5'
   gem 'shoulda-matchers', require: false
   gem 'valid_attribute'
+end
+
+group :test do
+  gem 'coveralls', require: false
 end
 
 group :production do
