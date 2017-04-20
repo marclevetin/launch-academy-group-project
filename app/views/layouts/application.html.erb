@@ -12,6 +12,8 @@
   </head>
 
   <body>
+    <%= flash.each do |key, value| %> <%= value %> <% end %>
+
     <div className="row">
       <div className="small-6 medium-6 large-6 columns">
         <div className="header">
