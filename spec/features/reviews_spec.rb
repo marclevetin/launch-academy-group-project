@@ -5,27 +5,17 @@ feature "Reviews" do
   context "Walking through needed CRUD actions" do
 
     scenario "Review page shows correct content" do
-      Sparky = User.create!(
-        name:'Sparky',
-        email:'sparky@gmail.com',
-        encrypted_password: 'w',
-        role: 'a'
-        )
+      user = FactoryGirl.create(:user)
 
-      visit user_reviews_path(Sparky)
+      visit user_reviews_path(user)
 
       expect(page).to have_content("Reviews Index page")
     end
 
     scenario "New Review is added successfully" do
-      Sparky = User.create!(
-        name: 'Sparky',
-        email: 'sparky@gmail.com',
-        encrypted_password: 'w',
-        role: 'a'
-      )
+      user = FactoryGirl.create(:user)
 
-      visit new_user_review_path(Sparky)
+      visit new_user_review_path(user)
 
       fill_in "title", with: "Denver omelette review"
       fill_in "body", with: "This omelette is GOOD!"
@@ -40,14 +30,9 @@ feature "Reviews" do
     end
 
     scenario "New Review is NOT added successfully" do
-      Sparky = User.create!(
-        name: 'Sparky',
-        email: 'sparky@gmail.com',
-        encrypted_password: 'w',
-        role: 'a'
-      )
+      review = FactoryGirl.create(:review)
 
-      visit new_user_review_path(Sparky)
+      visit new_user_review_path(review.user)
 
       click_button "Create Review"
 
