@@ -12,8 +12,17 @@
   </head>
 
   <body>
-    <% flash.each do |key, value| %> <%= value %> <% end %>
-  
+    <div id="nav">
+      <% flash.each do |key, value| %> <%= value %> <% end %>
+      <% if reg_user_signed_in? %>
+        <%= link_to "Sign out", destroy_reg_user_session_path, :method => 'delete' %>
+      <% else %>
+        <%= link_to "Sign in", new_reg_user_session_path %> |
+        <%= link_to "Create account", new_reg_user_registration_path %> |
+      <% end %>
+
+    </div>
+
     <%= yield %>
 
   </body>
