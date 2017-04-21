@@ -13,6 +13,22 @@
 
   <body>
     <%= flash.each do |key, value| %> <%= value %> <% end %>
+
+    <div className="row">
+      <div className="small-6 medium-6 large-6 columns">
+        <div className="header">
+          <div class="title">
+            <h1>Eggxit Review</h1>
+          </div>
+        </div>
+      <div className="small-6 medium-6 large-6 columns text-right">
+        <div className="login">
+            <%= link_to "Register", new_user_path %> | <%= link_to "Login", root_path %>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <%= yield %>
 
   </body>
