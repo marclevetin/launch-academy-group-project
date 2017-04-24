@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 RegUser.create(
-first_name: 'Eggy',
-last_name: 'McEggerson',
-email: 'eggs@eggs.com',
-password: 'password'
+  first_name: 'Eggy',
+  last_name: 'McEggerson',
+  email: 'eggs@eggs.com',
+  password: 'password'
 )
 Review.create!(title: '1', body: 'b', image_path: 'c', user_id:1)
