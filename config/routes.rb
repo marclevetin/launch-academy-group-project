@@ -4,5 +4,7 @@ Rails.application.routes.draw do
     resources :reviews
   end
 
+  resources :reg_users, only: [:index, :show]
+
   root 'static_pages#index'
 end
