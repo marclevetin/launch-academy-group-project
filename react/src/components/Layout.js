@@ -3,7 +3,7 @@ import React from 'react';
 const Layout = (props) => {
   return(
     <div>
-      <h2>React Omlettes!</h2>
+      <h2>Eggxit Review! (React)</h2>
       { props.children }
     </div>
   )
