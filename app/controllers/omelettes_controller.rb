@@ -1,11 +1,10 @@
 class OmelettesController < ApplicationController
 
   def index
-    render "/"
+    render component: 'OmeletteIndex'
   end
 
   def show
-    render component: 
   end
 
 end
