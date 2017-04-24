@@ -10,7 +10,7 @@ feature 'user signs in' do
       last_name: 'McEggerson',
       email: 'eggs@eggs.com',
       password: 'password'
-    )
+      )
     end
 
     scenario "specifying valid and required info" do
