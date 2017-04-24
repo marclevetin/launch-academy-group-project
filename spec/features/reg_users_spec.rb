@@ -17,5 +17,9 @@ feature "Registered Users" do
       expect(page).to have_content("Show page!")
 
     end
+
+    scenario "Show page has an avatar" do
+      expect(page).to have_css("img[src*='photo.png']")
+    end
   end
 end
