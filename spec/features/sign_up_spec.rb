@@ -7,6 +7,8 @@ feature "user signs up" do
     scenario "specifying valid and required info" do
       visit root_path
       click_link 'Create account'
+      fill_in 'First name', with: 'Eggy'
+      fill_in 'Last name', with: 'McEggerson'
       fill_in 'Email', with: 'eggs@eggs.com'
       fill_in 'Password', with: 'password'
       fill_in 'Password confirmation', with: 'password'
@@ -19,6 +21,8 @@ feature "user signs up" do
     scenario "required info is not supplied" do
       visit root_path
       click_link 'Create account'
+      fill_in 'First name', with: 'Eggy'
+      fill_in 'Last name', with: 'McEggerson'
       fill_in 'Email', with: 'eggs@eggs.com'
 
       click_button 'Sign up'
@@ -29,6 +33,8 @@ feature "user signs up" do
     scenario "passwords don't match" do
       visit root_path
       click_link 'Create account'
+      fill_in 'First name', with: 'Eggy'
+      fill_in 'Last name', with: 'McEggerson'
       fill_in 'Email', with: 'eggs@eggs.com'
       fill_in 'Password', with: 'password'
       fill_in 'Password confirmation', with: 'abc'

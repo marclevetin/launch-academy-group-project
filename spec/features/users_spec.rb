@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature "Users " do
+feature "Users" do
 
   context "Walking through all of the needed CRUD actions" do
 
@@ -41,7 +41,7 @@ feature "Users " do
         encrypted_password: 'w',
         role: 'a'
       )
-      
+
       visit user_path(sparky)
 
       expect(page).to have_content("Show page!")
