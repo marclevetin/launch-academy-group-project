@@ -19,6 +19,17 @@ feature "Registered Users" do
     end
 
     scenario "Show page has an avatar" do
+      visit root_path
+      click_link 'Create account'
+      fill_in 'First name', with: 'Eggy'
+      fill_in 'Last name', with: 'McEggerson'
+      fill_in 'Email', with: 'eggs@eggs.com'
+      fill_in 'Password', with: 'password'
+      fill_in 'Password confirmation', with: 'password'
+      attach_file :avatar, "#{Rails.root}/spec/support/images/photo.png"
+      click_button 'Sign up'
+      visit reg_user_path(RegUser.find_by(email:'eggs@eggs.com'))
+
       expect(page).to have_css("img[src*='photo.png']")
     end
   end
