@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+  root 'static_pages#index'
+
   resources :users, only: [:create, :index, :new, :show] do
-    resources :reviews
+    resources :reviews, only: [:index]
   end
 
-  root 'static_pages#index'
+  resources :omelettes, only: [:index, :show, :new, :create] do
+    resources :reviews, only: [:index, :new, :create]
+  end
 end
