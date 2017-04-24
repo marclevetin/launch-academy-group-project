@@ -34,7 +34,8 @@ feature "user signs up" do
       fill_in 'Password confirmation', with: 'abc'
       click_button 'Sign up'
 
-      expect(page).to have_content("Password confirmation doesn't match Password")
+      expect(page).to have_content
+        ("Password confirmation doesn't match Password")
     end
   end
 end
