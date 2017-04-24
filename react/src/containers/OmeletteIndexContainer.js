@@ -6,16 +6,20 @@ class OmeletteIndexContainer extends Component {
 
     this.state = {
       omelette: null,
+      offset: 0,
       data: []
     }
 
   }
 
   render() {
+    let omeletteItems = this.state.data.map((o) => {
+      let clickIdHandler = (id) => {this.clickHandler(q.id)}
+
     return(
-      <div>
-        <h2>search bar here</h2>
-        { this.props.children }
+      <h2>search bar here</h2>
+      <div className="row">
+        { OmeletteIndexItem }
       </div>
     )
   }

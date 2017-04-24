@@ -9,8 +9,8 @@ class OmeletteIndexItem extends Component {
 
   render() {
     return(
-      <div className="index-item">
-        
+      <div className="index-item large-4 medium-6 small-12 columns">
+        <img src={this.props.image}/>
       </div>
     )
   }
