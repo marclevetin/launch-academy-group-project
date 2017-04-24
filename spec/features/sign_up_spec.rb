@@ -35,7 +35,7 @@ feature "user signs up" do
       click_button 'Sign up'
 
       expect(page).to have_content
-        ("Password confirmation doesn't match Password")
+      ("Password confirmation doesn't match Password")
     end
   end
 end
