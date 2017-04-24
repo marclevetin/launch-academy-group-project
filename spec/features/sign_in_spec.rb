@@ -4,8 +4,8 @@ feature 'user signs in' do
 
   context 'user signs in' do
 
-    let!(:reguser) { create :RegUser, field: value }
-
+    let!(:reguser) { RegUser.create(email: 'eggs@eggs.com', password: 'password') }
+    
     scenario "specifying valid and required info" do
       visit root_path
       click_link 'Sign in'
@@ -14,7 +14,7 @@ feature 'user signs in' do
 
       click_button 'Log in'
 
-      expect(page).to have_content("Success")
+      expect(page).to have_content("Signed in successfully.")
       expect(page).to have_content("Sign out")
     end
 
@@ -25,18 +25,18 @@ feature 'user signs in' do
 
       click_button 'Log in'
 
-      expect(page).to have_content("Invalid password.")
+      expect(page).to have_content("Invalid Email or password.")
     end
 
-    scenario "passwords is incorrect" do
+    scenario "password is incorrect" do
       visit root_path
-      click_link 'Sign In'
+      click_link 'Sign in'
       fill_in 'Email', with: 'eggs@eggs.com'
-      fill_in 'Password', with: 'password'
+      fill_in 'Password', with: 'abc'
 
       click_button 'Log in'
 
-      expect(page).to have_content("Passwords don't match")
+      expect(page).to have_content("Invalid Email or password.")
     end
   end
 end
