@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-xfeature 'user signs in' do
+feature 'user signs in' do
 
   context 'user signs in' do
 
