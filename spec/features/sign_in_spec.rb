@@ -4,7 +4,13 @@ feature 'user signs in' do
 
   context 'user signs in' do
 
-    let!(:reguser) { RegUser.create(first_name: 'Eggy', last_name: 'McEggerson', email: 'eggs@eggs.com', password: 'password') }
+    let!(:reguser) {
+      RegUser.create(
+      first_name: 'Eggy',
+      last_name: 'McEggerson',
+      email: 'eggs@eggs.com',
+      password: 'password')
+    }
 
     scenario "specifying valid and required info" do
       visit root_path
