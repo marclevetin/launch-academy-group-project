@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170424162252) do
+ActiveRecord::Schema.define(version: 20170424165409) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,28 +38,20 @@ ActiveRecord::Schema.define(version: 20170424162252) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "first_name",                          null: false
+    t.string   "last_name",                           null: false
     t.index ["email"], name: "index_reg_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_reg_users_on_reset_password_token", unique: true, using: :btree
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.string   "title",      null: false
-    t.text     "body",       null: false
+    t.string   "title",       null: false
+    t.text     "body",        null: false
     t.string   "image_path"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_reviews_on_user_id", using: :btree
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string   "name",               null: false
-    t.string   "email",              null: false
-    t.string   "encrypted_password", null: false
-    t.string   "picture_path"
-    t.string   "role",               null: false
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.integer  "reg_user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["reg_user_id"], name: "index_reviews_on_reg_user_id", using: :btree
   end
 
 end
