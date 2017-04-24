@@ -12,7 +12,7 @@ feature "Registered Users" do
         role: 'a'
       )
 
-      visit user_path(sparky)
+      visit reg_user_path(sparky)
 
       expect(page).to have_content("Show page!")
 
