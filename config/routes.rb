@@ -5,4 +5,11 @@ Rails.application.routes.draw do
   end
 
   root 'static_pages#index'
+
+  namespace :api do
+    namespace :v1 do
+      resources :omelettes
+    end
+  end
+  
 end
