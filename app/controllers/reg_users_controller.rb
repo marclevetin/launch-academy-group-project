@@ -4,7 +4,7 @@ class RegUsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = RegUser.find(params[:id])
   end
 
 end

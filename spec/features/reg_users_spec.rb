@@ -5,11 +5,11 @@ feature "Registered Users" do
   context "A user needs to change their password or otherwise update their profile" do
 
     scenario "Show page appears" do
-      sparky = User.create(
-        name: 'Sparky',
+      sparky = RegUser.create(
+        first_name: 'Sparky',
+        last_name: 'Yolkerham',
         email: 'sparky@gmail.com',
-        encrypted_password: 'w',
-        role: 'a'
+        password: 'password'
       )
 
       visit reg_user_path(sparky)
