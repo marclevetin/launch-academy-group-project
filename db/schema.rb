@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170424165409) do
+ActiveRecord::Schema.define(version: 20170425140026) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "omelettes", force: :cascade do |t|
+    t.string  "title",       null: false
+    t.text    "description", null: false
+    t.string  "ingredients", null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_omelettes_on_user_id", using: :btree
+  end
 
   create_table "omlettes", force: :cascade do |t|
     t.string   "title",       null: false
@@ -40,6 +48,7 @@ ActiveRecord::Schema.define(version: 20170424165409) do
     t.datetime "updated_at",                          null: false
     t.string   "first_name",                          null: false
     t.string   "last_name",                           null: false
+    t.string   "avatar"
     t.index ["email"], name: "index_reg_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_reg_users_on_reset_password_token", unique: true, using: :btree
   end
