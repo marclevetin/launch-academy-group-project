@@ -13,6 +13,6 @@ class Api::V1::ThingsController < ApplicationController
   private
 
   def omelette_params
-    params.require(:omelette).permit(:id, :name)
+    params.require(:omelette).permit(:id, :title, :description, :ingredients)
   end
 end
