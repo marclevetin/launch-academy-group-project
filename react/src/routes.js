@@ -4,7 +4,7 @@ import OmeletteIndexContainer from './containers/OmeletteIndexContainer';
 
 let routes = (
   <Route path="/" component={OmeletteIndexContainer}>
-    
+
   </Route>
 );
 

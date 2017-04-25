@@ -15,6 +15,14 @@ class OmeletteIndexContainer extends Component {
     return(
       <div>
         <h2>search bar here</h2>
+        <form action="/meetups/new" method="post" class="form_name">
+  <label for="name"class="white_words">Name</label>
+  <input type="text" name="name" value=<% %>>
+  <br />
+
+
+
+
         { this.props.children }
       </div>
     )
