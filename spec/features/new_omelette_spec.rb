@@ -14,7 +14,7 @@ feature "A user can add omelettes" do
 
     scenario "form can be completed with photo, happy path" do
       user = FactoryGirl.create(:reg_user)
-      login_as(user, :scope => :reg_user)
+      login_as(user, scope: :reg_user)
 
       visit new_reg_user_omelette_path(user)
 
@@ -30,7 +30,6 @@ feature "A user can add omelettes" do
       expect(page).to have_css("img[src*='photo.png']")
     end
 
-
     scenario "title is required" do
       user = FactoryGirl.create(:reg_user)
       login_as(user, :scope => :reg_user)
@@ -45,7 +44,7 @@ feature "A user can add omelettes" do
 
     scenario "description is required" do
       user = FactoryGirl.create(:reg_user)
-      login_as(user, :scope => :reg_user)
+      login_as(user, scope: :reg_user)
 
       visit new_reg_user_omelette_path(user)
 
@@ -57,7 +56,7 @@ feature "A user can add omelettes" do
 
     scenario "ingredients are required" do
       user = FactoryGirl.create(:reg_user)
-      login_as(user, :scope => :reg_user)
+      login_as(user, scope: :reg_user)
 
       visit new_reg_user_omelette_path(user)
 
@@ -69,7 +68,7 @@ feature "A user can add omelettes" do
 
     scenario "photo is optional" do
       user = FactoryGirl.create(:reg_user)
-      login_as(user, :scope => :reg_user)
+      login_as(user, scope: :reg_user)
 
       visit new_reg_user_omelette_path(user)
 
