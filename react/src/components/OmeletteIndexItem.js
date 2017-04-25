@@ -10,7 +10,7 @@ class OmeletteIndexItem extends Component {
   render() {
     return(
       <div className="index-item">
-        
+
       </div>
     )
   }
