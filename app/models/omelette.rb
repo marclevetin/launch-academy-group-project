@@ -3,5 +3,7 @@ class Omelette < ApplicationRecord
   validates :description, presence: true
   validates :ingredients, presence: true
 
-  belongs_to :user
+  belongs_to :reg_user
+
+  mount_uploader :photo, OmelettePhotoUploader
 end
