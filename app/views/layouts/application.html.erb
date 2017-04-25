@@ -3,32 +3,41 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" type="text/css" href="stylesheets/custom.css">
 
     <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+
+
+
+
   </head>
 
   <body>
-    <% flash.each do |key, value| %> <%= value %> <% end %>
-    <div className="row">
-      <div className="header">
-        <div className="small-6 medium-6 large-6 columns">
-          <div className="login">
-            <% if reg_user_signed_in? %>
-              <%= link_to "Sign out", destroy_reg_user_session_path, :method => 'delete' %>
-            <% else %>
-              <%= link_to "Sign in", new_reg_user_session_path %> |
-              <%= link_to "Create account", new_reg_user_registration_path %> |
-            <% end %>
-            <h1>Eggxit Review</h1>
-          </div>
-        </div>
-      </div>
+      <% flash.each do |key, value| %> <%= value %> <% end %>
+
+    <!-- navigation -->
+    <div class="top-bar">
+    <div class="top-bar-left">
+      <ul class="menu">
+        <li class="menu-text">Eggxit Review</li>
+        <li><a href="#">About</a></li>
+      </ul>
     </div>
+
+    <div class="top-bar-right">
+      <ul class="menu">
+        <li><%= link_to "Register",  new_reg_user_registration_path %></li>
+        <li><%= link_to "Login", root_path %></li>
+
+      </ul>
     </div>
+  </div>
+
+
 
     <%= yield %>
 

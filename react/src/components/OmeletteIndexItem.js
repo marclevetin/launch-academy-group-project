@@ -11,6 +11,7 @@ class OmeletteIndexItem extends Component {
     return(
       <div className="index-item">
 
+
       </div>
     )
   }
