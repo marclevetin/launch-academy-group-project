@@ -25,13 +25,11 @@ class OmelettesController < ApplicationController
 
   def show
     @omelette = Omelette.find(params[:id])
-    
     if @omelette.photo.nil?
       @url = ""
     else
       @url = @omelette.photo.url
     end
-
   end
 
   private

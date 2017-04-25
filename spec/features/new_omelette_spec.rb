@@ -32,7 +32,7 @@ feature "A user can add omelettes" do
 
     scenario "title is required" do
       user = FactoryGirl.create(:reg_user)
-      login_as(user, :scope => :reg_user)
+      login_as(user, scope: :reg_user)
 
       visit new_reg_user_omelette_path(user)
 
