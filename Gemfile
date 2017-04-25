@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'foundation-rails'
 gem 'devise'
 gem 'carrierwave', '~> 1.0'
+gem 'email_spec'
 
 group :development do
   gem 'listen', '~> 3.0.5'
