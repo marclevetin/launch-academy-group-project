@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170425140026) do
+ActiveRecord::Schema.define(version: 20170425150812) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,16 +21,6 @@ ActiveRecord::Schema.define(version: 20170425140026) do
     t.string  "ingredients", null: false
     t.integer "user_id"
     t.index ["user_id"], name: "index_omelettes_on_user_id", using: :btree
-  end
-
-  create_table "omlettes", force: :cascade do |t|
-    t.string   "title",       null: false
-    t.text     "description", null: false
-    t.string   "ingredients"
-    t.integer  "user_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.index ["user_id"], name: "index_omlettes_on_user_id", using: :btree
   end
 
   create_table "reg_users", force: :cascade do |t|
@@ -61,6 +51,16 @@ ActiveRecord::Schema.define(version: 20170425140026) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.index ["reg_user_id"], name: "index_reviews_on_reg_user_id", using: :btree
+  end
+
+  create_table "votes", force: :cascade do |t|
+    t.integer  "vote",        null: false
+    t.integer  "review_id"
+    t.integer  "reg_user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["reg_user_id"], name: "index_votes_on_reg_user_id", using: :btree
+    t.index ["review_id"], name: "index_votes_on_review_id", using: :btree
   end
 
 end
