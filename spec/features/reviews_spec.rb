@@ -28,7 +28,7 @@ feature "Reviews" do
       expect(page).to have_content("Reviews Index page")
       expect(page).to have_content("Denver omelette review")
       expect(page).to have_content("This omelette is GOOD!")
-      expect(ActionMailer::Base.deliveries.count).to eq(1)
+      expect(ActionMailer::Base.deliveries.count).to eq(0)
     end
 
     scenario "New Review is NOT added successfully" do
