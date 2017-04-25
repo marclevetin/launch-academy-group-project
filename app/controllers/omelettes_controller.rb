@@ -23,23 +23,23 @@ class OmelettesController < ApplicationController
 
   def show
     @omelette = Omelette.find(params[:id])
-    if @omelette.photo
+
+    if @omelette.photo.nil?
       @url = ""
     else
-      @url = @omlette.photo.url
+      @url = @omelette.photo.url
     end
 
   end
 
-    private
+  private
 
-    def omelette_params
-      params.require(:omelette).permit(
-        :title,
-        :description,
-        :ingredients,
-        :photo
-      )
-      binding.pry
-    end
+  def omelette_params
+    params.require(:omelette).permit(
+      :title,
+      :description,
+      :ingredients,
+      :photo
+    )
+  end
 end
