@@ -1,4 +1,6 @@
 class OmelettesController < ApplicationController
+  before_action :authenticate_reg_user!, except: [:index, :show]
+
   def create
     @user = RegUser.find(params[:reg_user_id])
     @omelette = Omelette.new(omelette_params)
