@@ -1,4 +1,4 @@
-class Api::V1::ThingsController < ApplicationController
+class Api::V1::OmelettesController < ApplicationController
   protect_from_forgery unless: -> { request.format.json? }
 
   def index
