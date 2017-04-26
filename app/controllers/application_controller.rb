@@ -11,4 +11,8 @@ class ApplicationController < ActionController::Base
       keys: [:first_name, :last_name, :avatar]
     )
   end
+
+  def admin?
+    role == "admin"
+  end
 end
