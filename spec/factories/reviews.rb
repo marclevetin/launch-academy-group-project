@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :review do
-    title "Review"
     body "Bacon ipsum dolor emit sausage pork roast shoulder BBQ"
+    rating "3"
     image_path "http://itsanimage.com/JPG.png"
 
     reg_user
