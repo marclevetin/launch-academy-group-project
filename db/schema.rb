@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170425154524) do
+ActiveRecord::Schema.define(version: 20170426191134) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 20170425154524) do
     t.integer "reg_user_id"
     t.string  "photo"
     t.index ["reg_user_id"], name: "index_omelettes_on_reg_user_id", using: :btree
-
   end
 
   create_table "reg_users", force: :cascade do |t|
@@ -46,12 +45,14 @@ ActiveRecord::Schema.define(version: 20170425154524) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.string   "title",       null: false
     t.text     "body",        null: false
     t.string   "image_path"
     t.integer  "reg_user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "rating",      null: false
+    t.integer  "omelette_id"
+    t.index ["omelette_id"], name: "index_reviews_on_omelette_id", using: :btree
     t.index ["reg_user_id"], name: "index_reviews_on_reg_user_id", using: :btree
   end
 
