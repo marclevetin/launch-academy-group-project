@@ -7,6 +7,9 @@ class RegUser < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
 
+  has_many :omelettes
+  has_many :reviews
+
   mount_uploader :avatar, AvatarUploader
 
   def admin?
