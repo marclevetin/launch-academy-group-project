@@ -15,3 +15,13 @@
  *= require foundation_and_overrides
 
  */
+
+ body {
+     background-color: lightblue;
+
+
+ }
+
+ .top-bar {
+ background: #333333;
+ margin-bottom: 0; }
