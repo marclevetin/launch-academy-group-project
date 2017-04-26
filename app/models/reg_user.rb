@@ -8,4 +8,7 @@ class RegUser < ApplicationRecord
   validates :last_name, presence: true
 
   mount_uploader :avatar, AvatarUploader
+
+  has_many :omelettes
+  has_many :reviews
 end

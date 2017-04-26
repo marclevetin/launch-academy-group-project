@@ -15,6 +15,8 @@ feature "Reviews" do
     scenario "New Review is added successfully" do
       user = FactoryGirl.create(:reg_user)
 
+      omelette = FactoryGirl.create(:omelette)
+
       visit new_reg_user_review_path(user)
 
       fill_in "title", with: "Denver omelette review"

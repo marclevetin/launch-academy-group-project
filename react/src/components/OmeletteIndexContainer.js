@@ -12,9 +12,11 @@ class OmeletteIndexContainer extends Component {
   }
 
   render() {
+
     return(
       <div>
-        <h2>search bar here</h2>
+        <h2>OmeletteIndexContainer</h2>
+        <input type='text' placeholder="search bar here" />
         { this.props.children }
       </div>
     )

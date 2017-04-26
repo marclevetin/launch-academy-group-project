@@ -1,12 +1,24 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Layout = (props) => {
-  return(
-    <div>
-      <h2>Eggxit Review! (React)</h2>
-      { props.children }
-    </div>
-  )
+class Layout extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+
+    }
+  }
+
+
+
+
+  render(){
+    return(
+      <div>
+        <h2>react app shell</h2>
+        { this.props.children }
+      </div>
+    )
+  }
 }
 
 export default Layout;

@@ -1,6 +1,6 @@
 import react, { Component } from 'React';
 
-class OmeletteIndexItem extends Component {
+class OmeletteTile extends Component {
   constructor(props) {
     super(props);
 
@@ -15,3 +15,5 @@ class OmeletteIndexItem extends Component {
     )
   }
 }
+
+export default OmeletteTile;

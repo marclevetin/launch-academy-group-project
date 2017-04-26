@@ -3,6 +3,10 @@
 <%= form_for [@user, @review] do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title, id: 'title' %>
+  <%= f.label :omelette_id %>
+  <%= f.text_field :omelette_id, id: 'omelette_id' %>
+  <%= f.label :reg_user_id %>
+  <%= f.text_field :reg_user_id, id: 'reg_user_id' %>
   <%= f.label :body %>
   <%= f.text_area :body, id: 'body' %>
   <%= f.label :image_path %>

@@ -4,6 +4,7 @@ FactoryGirl.define do
     body "Bacon ipsum dolor emit sausage pork roast shoulder BBQ"
     image_path "http://itsanimage.com/JPG.png"
 
+    omelette
     reg_user
   end
 end

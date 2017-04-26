@@ -5,7 +5,7 @@ class AddOmelettesTable < ActiveRecord::Migration[5.0]
       t.text :description, null: false
       t.string :ingredients, null: false
 
-      t.belongs_to :user
+      t.belongs_to :reg_user
     end
   end
 end
