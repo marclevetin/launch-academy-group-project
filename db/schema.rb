@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 20170425154524) do
     t.integer "reg_user_id"
     t.string  "photo"
     t.index ["reg_user_id"], name: "index_omelettes_on_reg_user_id", using: :btree
-
   end
 
   create_table "reg_users", force: :cascade do |t|
