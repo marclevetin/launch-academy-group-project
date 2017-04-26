@@ -36,3 +36,8 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
 end
+
+# this allows us to sign in a user for tests
+RSpec.configure do |config|
+  config.include Warden::Test::Helpers
+end
