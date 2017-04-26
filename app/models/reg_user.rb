@@ -8,4 +8,8 @@ class RegUser < ApplicationRecord
   validates :last_name, presence: true
 
   mount_uploader :avatar, AvatarUploader
+
+  def admin?
+    role == "admin"
+  end
 end

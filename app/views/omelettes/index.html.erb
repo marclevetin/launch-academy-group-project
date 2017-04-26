@@ -1,0 +1,8 @@
+<h1>Omelettes Index</h1>
+<ul>
+  <% @omelettes.each do |egg| %>
+    <li>
+      <%= link_to egg.title, reg_user_omelette_path(params[:reg_user_id], egg) %>
+    </li>
+  <% end %>
+</ul>
