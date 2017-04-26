@@ -16,7 +16,10 @@ class OmelettesController < ApplicationController
   end
 
   def destroy
-
+    @omelette = Omelette.find(params[:id])
+    @omelette.destroy
+    flash[:success] = "Omelette has been trashed."
+    redirect_to reg_user_omelettes_path
   end
 
   def index
@@ -49,7 +52,7 @@ class OmelettesController < ApplicationController
   end
 
   def authorize_user
-    if !user_signed_in? || !current_user.admin?
+    if !reg_user_signed_in? || !current_reg_user.admin?
       raise ActionController::RoutingError.new("Not Found")
     end
   end
