@@ -27,6 +27,7 @@
                       </div>
                       <div class="top-bar-right">
                           <% if reg_user_signed_in? %>
+                            <%= link_to "Add new omelette", new_reg_user_omelette_path(current_reg_user) %> |
                             <%= link_to "Sign out", destroy_reg_user_session_path, :method => 'delete' %>
                           <% else %>
                             <%= link_to "Sign in", new_reg_user_session_path %> |
