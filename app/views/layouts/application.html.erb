@@ -6,34 +6,42 @@
     <%= submit_tag "Search", :name => nil %>
 <% end %>
   <head>
+
+
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 
     <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+
+    <link rel="stylesheet" href="css/app.css">
+
+
   </head>
 
   <body>
     <% flash.each do |key, value| %> <%= value %> <% end %>
-    <div className="row">
-      <div className="header">
-        <div className="small-6 medium-6 large-6 columns">
-          <div className="login">
-            <% if reg_user_signed_in? %>
-              <%= link_to "Sign out", destroy_reg_user_session_path, :method => 'delete' %>
-            <% else %>
-              <%= link_to "Sign in", new_reg_user_session_path %> |
-              <%= link_to "Create account", new_reg_user_registration_path %> |
-            <% end %>
-            <h1>Eggxit Review</h1>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
+                    <div class="top-bar">
+                      <div class="top-bar-left">
+                          <%= link_to image_tag("egglogo.png"), root_path %>
+                      </div>
+                      <div class="top-bar-right">
+                          <% if reg_user_signed_in? %>
+                            <%= link_to "Add new omelette", new_reg_user_omelette_path(current_reg_user) %> |
+                            <%= link_to "Sign out", destroy_reg_user_session_path, :method => 'delete' %>
+                          <% else %>
+                            <%= link_to "Sign in", new_reg_user_session_path %> |
+                            <%= link_to "Create account", new_reg_user_registration_path %> |
+                          <% end %></div>
+                      </div>
+                    </div>
+
+
 
     <%= yield %>
 

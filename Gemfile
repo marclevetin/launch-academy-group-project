@@ -8,6 +8,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'foundation-rails'
 gem 'devise'
+gem 'carrierwave', '~> 1.0'
+gem 'fog'
+gem 'active_model_serializers'
 
 group :development do
   gem 'listen', '~> 3.0.5'
@@ -24,6 +27,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5'
   gem 'shoulda-matchers', require: false
   gem 'valid_attribute'
+  gem 'dotenv-rails'
+  gem 'faker'
 end
 
 group :test do

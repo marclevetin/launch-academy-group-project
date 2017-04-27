@@ -43,5 +43,21 @@ feature "user signs up" do
       expect(page).to have_content
       ("Password confirmation doesn't match Password")
     end
+
+    scenario "user can upload an avatar photo" do
+
+      visit root_path
+      click_link 'Create account'
+      fill_in 'First name', with: 'Eggy'
+      fill_in 'Last name', with: 'McEggerson'
+      fill_in 'Email', with: 'eggs@eggs.com'
+      fill_in 'Password', with: 'password'
+      fill_in 'Password confirmation', with: 'password'
+      attach_file :avatar, "#{Rails.root}/spec/support/images/photo.png"
+      click_button 'Sign up'
+
+      expect(page).to have_content("Welcome! You have signed up successfully.")
+      expect(page).to have_content("Sign out")
+    end
   end
 end
