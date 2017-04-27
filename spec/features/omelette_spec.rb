@@ -133,6 +133,16 @@ feature "A user interacts with omelettes" do
       expect(page).to have_content("Omelettes Index")
     end
 
+    scenario "link to new form can be found from home page" do
+      user = FactoryGirl.create(:reg_user, role: "member")
+      login_as(user, scope: :reg_user)
+
+      visit '/'
+
+      click_link 'Add new omelette'
+
+      expect(page).to have_content("New Omelette Form")
+    end
   end
 
 end
