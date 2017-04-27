@@ -6,4 +6,7 @@ class RegUser < ApplicationRecord
 
   validates :first_name, presence: true
   validates :last_name, presence: true
+  def self.search(search)
+  where("first_name ILIKE ? OR last_name ILIKE ?", "%#{search}%", "%#{search}%")
+  end
 end

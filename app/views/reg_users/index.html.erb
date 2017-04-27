@@ -2,3 +2,7 @@
 <% @regusers.each do |reguser| %>
   <%= reguser.first_name %> <%= reguser.last_name %>
 <% end %>
+
+<% if @regusers.blank? %>
+  <h4>There are no users with that <%= params[:search] %>.</h4>
+<% end %>
