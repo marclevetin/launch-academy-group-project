@@ -28,13 +28,16 @@
                       </div>
                       </div>
                       <div class="top-bar-right">
+                        <div class="formtext">
                           <% if reg_user_signed_in? %>
                             <%= link_to "Sign out", destroy_reg_user_session_path, :method => 'delete' %> |
 
                           <% else %>
                             <%= link_to "Sign in", new_reg_user_session_path %> |
                             <%= link_to "Create account", new_reg_user_registration_path %> |
-                          <% end %></div>
+                          <% end %>
+                          </div>
+                        </div>
                       </div>
 
                     </div>

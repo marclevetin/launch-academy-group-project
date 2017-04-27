@@ -33,11 +33,15 @@
     width: 50%;
     border: 10px solid black;
     padding: 10px;
+
 }
 
 .logo{
   margin: auto;
   width: 75%;
+}
 
-
+.formtext{
+  background-color: yellow
+  font-size: 40px;
 }
