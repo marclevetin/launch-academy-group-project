@@ -23,16 +23,20 @@
     <% flash.each do |key, value| %> <%= value %> <% end %>
                     <div class="top-bar">
                       <div class="top-bar-left">
+                        <div class=logo>
                             <%= image_tag "egglogo.png" %>
+                      </div>
                       </div>
                       <div class="top-bar-right">
                           <% if reg_user_signed_in? %>
-                            <%= link_to "Sign out", destroy_reg_user_session_path, :method => 'delete' %>
+                            <%= link_to "Sign out", destroy_reg_user_session_path, :method => 'delete' %> |
+
                           <% else %>
                             <%= link_to "Sign in", new_reg_user_session_path %> |
                             <%= link_to "Create account", new_reg_user_registration_path %> |
                           <% end %></div>
                       </div>
+
                     </div>
 
 

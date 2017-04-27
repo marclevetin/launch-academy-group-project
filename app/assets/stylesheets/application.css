@@ -17,11 +17,27 @@
  */
 
  body {
-     background-color: lightblue;
+     background-color: cornflowerblue;
 
 
  }
 
  .top-bar {
- background: #333333;
- margin-bottom: 0; }
+   background-image: url("https://m.popkey.co/a86232/16bE8.gif");
+       background-color: #cccccc;
+}
+
+
+  .formy{
+    margin: auto;
+    width: 50%;
+    border: 10px solid black;
+    padding: 10px;
+}
+
+.logo{
+  margin: auto;
+  width: 75%;
+
+
+}
