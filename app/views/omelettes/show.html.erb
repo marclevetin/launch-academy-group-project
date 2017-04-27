@@ -1,9 +1,10 @@
-<% if current_reg_user.admin? %>
-  <p>
-    <%= link_to "Trash omelette", reg_user_omelette_path, method: :delete, data: {confirm: "Are you sure?" } %>
-  </p>
-<% end %>
+
+<div class="center">
+
 <h1><%= @omelette.title %></h1>
+<div>
 <%= @omelette.description %>
+</div>
 <%= @omelette.ingredients %>
 <img src="<%= @url %>" />
+</div>
