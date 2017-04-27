@@ -16,7 +16,7 @@
 end
 
 20.times do
-  o = Omelette.create(
+  Omelette.create(
     reg_user_id: rand(10)+1,
     title: Faker::Hacker.adjective+" "+Faker::Food.ingredient+" omelette",
     description: Faker::Hipster.paragraph(2, false, 2),

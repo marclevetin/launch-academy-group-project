@@ -12,7 +12,7 @@ const Eggstile = (props) => {
 
     <p>{props.description}</p>
     <div>
-      <a href={`/eggs/${props.id}`}><img src={props.photo} className="list-item-image"/></a>
+      <a href={`/omelettes/${props.id}`}><img src={props.photo} className="list-item-image"/></a>
     </div>
   </div>
 
