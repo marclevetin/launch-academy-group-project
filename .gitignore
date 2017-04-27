@@ -19,8 +19,12 @@
 # Ignore uploaded files in test/development
 /public/uploads
 
+# Ignore environment variables
 .env
+
+# Ignore other things
 /coverage
 /node_modules
 /node_modules/*
 /app/assets/javascripts/bundle.js
+.DS_Store
