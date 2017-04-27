@@ -24,7 +24,8 @@ end
       Faker::Food.ingredient,
       Faker::Food.ingredient,
       Faker::Food.ingredient
-    ]
+    ],
+    photo: Rails.root.join("spec/support/images/photo.png").open
   )
 end
 

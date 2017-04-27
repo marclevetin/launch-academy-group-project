@@ -8,7 +8,7 @@ class OmelettesController < ApplicationController
     @omelette.reg_user_id = @user.id
     if @omelette.save
       flash[:notice] = "Omelette successfully added"
-      redirect_to reg_user_omelette_path(@user, @omelette)
+      redirect_to omelette_path(@user, @omelette)
     else
       flash[:alert] = "Omelette not created.  Try again."
       render :new
