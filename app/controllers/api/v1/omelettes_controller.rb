@@ -1,4 +1,4 @@
-class Api::V1::OmelettesController < Api::ApiController
+class Api::V1::OmelettesController < ApplicationController
 
   def index
     render json: { omelette: Omelette.all }
