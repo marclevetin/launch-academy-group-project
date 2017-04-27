@@ -10,6 +10,7 @@ gem 'foundation-rails'
 gem 'devise'
 gem 'carrierwave', '~> 1.0'
 gem 'fog'
+gem 'active_model_serializers'
 
 group :development do
   gem 'listen', '~> 3.0.5'
