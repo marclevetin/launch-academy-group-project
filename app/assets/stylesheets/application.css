@@ -37,11 +37,17 @@
 }
 
 .logo{
-  margin: auto;
-  width: 75%;
+  display: block;
+    margin: auto;
+    width: 75%;
 }
 
 .formtext{
   background-color: yellow
-  font-size: 40px;
+
+}
+
+.eggbold{
+ font-weight: bold;
+
 }
