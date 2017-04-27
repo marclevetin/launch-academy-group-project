@@ -15,7 +15,7 @@
   )
 end
 
-20.times do
+20.times do |i|
   Omelette.create(
     reg_user_id: rand(10)+1,
     title: Faker::Hacker.adjective+" "+Faker::Food.ingredient+" omelette",
@@ -24,7 +24,8 @@ end
       Faker::Food.ingredient,
       Faker::Food.ingredient,
       Faker::Food.ingredient
-    ]
+    ],
+    photo: Rails.root.join("spec/support/images/omelette-#{i+1}.jpg").open
   )
 end
 

@@ -1,18 +1,6 @@
-<<<<<<< HEAD
-<h1>Omelettes</h1>
-<% @omelettes.each do |omelette| %>
-  <%= omelette.title %>
-  <%= omelette.description %>
-  <%= omelette.ingredients %>
-<% end %>
 
-<% if @omelettes.blank? %>
-  <h4>There are no recipes containing the term <%= params[:search] %>.</h4>
-<% end %>
+<div class="formy">
 
-<%= link_to "Create a New Review", new_reg_user_review_path(@review),
- class: "button", id: "new-review-link" %>
-=======
 <h1>Omelettes Index</h1>
 <ul>
   <% @omelettes.each do |egg| %>
@@ -21,4 +9,4 @@
     </li>
   <% end %>
 </ul>
->>>>>>> 61cb3ba0421174e04fe683582548632069031a40
+</div>

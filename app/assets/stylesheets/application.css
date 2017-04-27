@@ -17,11 +17,91 @@
  */
 
  body {
-     background-color: lightblue;
+
+      background: linear-gradient(cornflowerblue, white);
+
+
+
+
 
 
  }
 
  .top-bar {
- background: #333333;
- margin-bottom: 0; }
+   background-image: url("https://m.popkey.co/a86232/16bE8.gif");
+       background-color: #cccccc;
+}
+
+
+  .formy{
+    margin: auto;
+    width: 75%;
+    padding: 10px;
+
+}
+.menu{
+  margin: auto;
+  width: 50%;
+  border: 10px solid black;
+  padding: 10px;
+
+}
+
+.logo{
+  display: block;
+    margin: auto;
+    width: 75%;
+}
+
+.formtext{
+  background-color: yellow
+
+}
+
+.eggbold{
+ font-weight: bold;
+
+}
+
+.grow {
+  transition: all .2s ease-in-out;
+
+ }
+.grow:hover { transform: scale(1.6);
+
+}
+
+.rcorners1 {
+    border-radius: 25px;
+    background: #73AD21;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("img_parallax.jpg");
+
+    /* Set a specific height */
+    height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.center {
+    margin: auto;
+    width: 25%;
+    border: 2px solid black;
+    padding: 10px;
+}
+.centertwo {
+    margin: auto;
+    width: 19%;
+
+    padding: 10px;
+}

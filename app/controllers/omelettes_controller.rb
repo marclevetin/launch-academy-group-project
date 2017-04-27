@@ -8,7 +8,7 @@ class OmelettesController < ApplicationController
     @omelette.reg_user_id = @user.id
     if @omelette.save
       flash[:notice] = "Omelette successfully added"
-      redirect_to reg_user_omelette_path(@user, @omelette)
+      redirect_to omelette_path(@user, @omelette)
     else
       flash[:alert] = "Omelette not created.  Try again."
       render :new
@@ -23,14 +23,6 @@ class OmelettesController < ApplicationController
   end
 
   def index
-<<<<<<< HEAD
-    render component: 'Root'
-    if params[:search]
-   @recipes =Omelette.search(params[:search]).order("created_at DESC")
- else
-   @recipes = Omelette.all.order("created_at DESC")
- end
-=======
     @omelettes = Omelette.all
   end
 
@@ -64,5 +56,4 @@ class OmelettesController < ApplicationController
       raise ActionController::RoutingError.new("Not Found")
     end
   end
->>>>>>> 61cb3ba0421174e04fe683582548632069031a40
 end

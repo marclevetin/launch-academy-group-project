@@ -8,11 +8,10 @@ class Review < ApplicationRecord
     }
 
   belongs_to :reg_user
-<<<<<<< HEAD
+
   def self.search(search)
   where("title ILIKE ? OR body ILIKE ?", "%#{search}%", "%#{search}%")
   end
-=======
+
   belongs_to :omelette
->>>>>>> 61cb3ba0421174e04fe683582548632069031a40
 end

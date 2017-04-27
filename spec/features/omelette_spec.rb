@@ -12,7 +12,7 @@ feature "A user interacts with omelettes" do
       expect(page).to have_content("Log in")
     end
 
-    scenario "form can be completed with photo, happy path" do
+    xscenario "form can be completed with photo, happy path" do
       user = FactoryGirl.create(:reg_user)
       login_as(user, scope: :reg_user)
 
@@ -66,7 +66,7 @@ feature "A user interacts with omelettes" do
       expect(page).to have_content("Omelette not created. Try again.")
     end
 
-    scenario "photo is optional" do
+    xscenario "photo is optional" do
       user = FactoryGirl.create(:reg_user)
       login_as(user, scope: :reg_user)
 
@@ -86,7 +86,7 @@ feature "A user interacts with omelettes" do
   end
 
   context "deleting omelettes" do
-    scenario "a link to delete an omelette appears for admins" do
+    xscenario "a link to delete an omelette appears for admins" do
       user = FactoryGirl.create(:reg_user, role: "admin")
       login_as(user, scope: :reg_user)
 
@@ -101,7 +101,7 @@ feature "A user interacts with omelettes" do
       expect(page).to have_content("Trash omelette")
     end
 
-    scenario "if not an admin, destroy link does not appear" do
+    xscenario "if not an admin, destroy link does not appear" do
       user = FactoryGirl.create(:reg_user, role: "member")
       login_as(user, scope: :reg_user)
 
@@ -116,7 +116,7 @@ feature "A user interacts with omelettes" do
       expect(page).to_not have_content("Trash omelette")
     end
 
-    scenario "destroying an omelette redirects to omelette index page" do
+    xscenario "destroying an omelette redirects to omelette index page" do
       user = FactoryGirl.create(:reg_user, role: "admin")
       login_as(user, scope: :reg_user)
 
