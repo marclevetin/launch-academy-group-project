@@ -20,4 +20,4 @@ const ReviewTile = (props) => {
   )
 }
 
-export default Eggstile;
+export default ReviewTile;

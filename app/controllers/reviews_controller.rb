@@ -1,8 +1,4 @@
 class ReviewsController < ApplicationController
-  def index
-    @reviews = Review.all
-  end
-
   def new
     @user = RegUser.find(params[:reg_user_id])
     @review = Review.new
@@ -19,10 +15,6 @@ class ReviewsController < ApplicationController
       flash[:alert] = "Review not created.  Try again."
       render :new
     end
-  end
-
-  def show
-    @review = Review.find(params[:id])
   end
 
   def edit
