@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   devise_for :reg_users
-  resources :reg_users, only: [:index, :show] do
-    resources :reviews, only: [:index, :new, :create, :show, :edit]
-    resources :omelettes, only: [:create, :new, :destroy]
+
+  resources :reg_users, only: [:index, :show]
+
+  resources :omelettes, only: [:index, :show, :create, :new, :destroy] do
+    resources :reviews, only: [:new, :create, :edit, :update]
   end
-  resources :omelettes, only: [:index, :show]
 
   root 'static_pages#index'
 

@@ -3,12 +3,12 @@ class OmelettesController < ApplicationController
   before_action :authorize_user, only: [:destroy]
 
   def create
-    @user = RegUser.find(params[:reg_user_id])
+    @user = current_reg_user
     @omelette = Omelette.new(omelette_params)
     @omelette.reg_user_id = @user.id
     if @omelette.save
       flash[:notice] = "Omelette successfully added"
-      redirect_to omelette_path(@user, @omelette)
+      redirect_to omelette_path(@omelette)
     else
       flash[:alert] = "Omelette not created.  Try again."
       render :new
@@ -19,7 +19,7 @@ class OmelettesController < ApplicationController
     @omelette = Omelette.find(params[:id])
     @omelette.destroy
     flash[:success] = "Omelette has been trashed."
-    redirect_to reg_user_omelettes_path
+    redirect_to omelettes_path
   end
 
   def index
@@ -28,7 +28,6 @@ class OmelettesController < ApplicationController
 
   def new
     @omelette = Omelette.new
-    @user = RegUser.find(params[:reg_user_id])
   end
 
   def show

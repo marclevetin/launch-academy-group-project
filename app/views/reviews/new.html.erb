@@ -1,19 +1,14 @@
 <h1>Reviews New page</h1>
 
-<%= form_for [@user, @review] do |f| %>
+<%= form_for [@omelette, @review], url: omelette_reviews_path do |f| %>
   <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title, id: 'title' %>
+    <%= f.label :rating %>
+    <%= f.text_field :rating, id: 'rating' %>
   </div>
 
   <div class="field">
     <%= f.label :body %>
     <%= f.text_area :body, id: 'body' %>
-  </div>
-
-  <div class="field">
-    <%= f.label :image_path %>
-    <%= f.text_field :image_path, id: 'image_path' %>
   </div>
 
   <div class="actions">
