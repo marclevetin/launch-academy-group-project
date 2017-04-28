@@ -12,6 +12,8 @@ gem 'carrierwave', '~> 1.0'
 gem 'fog'
 gem 'fog-aws'
 gem 'active_model_serializers'
+gem 'pry-rails'
+gem 'faker'
 
 group :development do
   gem 'listen', '~> 3.0.5'
@@ -24,12 +26,10 @@ group :development, :test do
   gem 'factory_girl'
   gem 'factory_girl_rails'
   gem 'launchy', require: false
-  gem 'pry-rails'
   gem 'rspec-rails', '~> 3.5'
   gem 'shoulda-matchers', require: false
   gem 'valid_attribute'
   gem 'dotenv-rails'
-  gem 'faker'
 end
 
 group :test do

@@ -1,8 +1,4 @@
 class ReviewsController < ApplicationController
-  def index
-    @reviews = Review.all
-  end
-
   def new
     @omellete = Omelette.find(params[:omelette_id])
     @review = Review.new

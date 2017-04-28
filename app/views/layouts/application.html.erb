@@ -26,28 +26,25 @@
 
   <body>
     <% flash.each do |key, value| %> <%= value %> <% end %>
-                    <div class="top-bar">
-                      <div class="centertwo">
-                          <%= link_to image_tag("egglogo.png"), root_path %>
-                      </div>
-                      <div class="centertwo">
-                        <div class="formy">
-                          <% if reg_user_signed_in? %>
-                            <%= link_to "Add omelette", new_omelette_path(current_reg_user) %> |
-                            <%= link_to "Sign out", destroy_reg_user_session_path, :method => 'delete' %>
-                          <% else %>
-                            <%= link_to "Sign in", new_reg_user_session_path %> |
-                            <%= link_to "Create account", new_reg_user_registration_path %> |
-                          <% end %>
-                          </div>
-                        </div>
-                      </div>
 
-                    </div>
+    <div class="top-bar">
+      <div class="centertwo">
+          <%= link_to image_tag("egglogo.png"), root_path %>
+      </div>
+      <div class="centertwo">
+        <div class="formy">
+          <% if reg_user_signed_in? %>
+            <%= link_to "Add omelette", new_reg_user_omelette_path(current_reg_user) %> |
+            <%= link_to "Sign out", destroy_reg_user_session_path, :method => 'delete' %>
+          <% else %>
+            <%= link_to "Sign in", new_reg_user_session_path %> |
+            <%= link_to "Create account", new_reg_user_registration_path %> |
+          <% end %>
+        </div>
+      </div>
+    </div>
 
-
-
-    <%= yield %>
+      <%= yield %>
 
   </body>
 </html>

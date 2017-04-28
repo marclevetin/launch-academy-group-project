@@ -4,17 +4,20 @@ import { Link } from 'react-router';
 const ReviewTile = (props) => {
   return(
   <div className="review row">
-    <div className="review-header ">
-    <a href={`/omelettes/${props.id}`} >
-      <div className="eggbold">{props.title}</div>
-    </a>
+    <div className="review-header">
+      <div className="review-user 6 columns">
+        <strong>{props.name}</strong>
+      </div>
+      <div className="review-user text-left 6 columns">
+        <span>{props.created_at}</span>
+      </div>
+    </div>
 
-    <p>{props.description}</p>
-    <div>
-      <a href={`/omelettes/${props.id}`}><img src={props.photo} className="list-item-image"/></a>
+    <div className="review-body">
+      <p>{props.body}</p>
     </div>
   </div>
   )
 }
 
-export default Eggstile;
+export default ReviewTile;
