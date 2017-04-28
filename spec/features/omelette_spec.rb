@@ -139,7 +139,7 @@ feature "A user interacts with omelettes" do
 
       visit '/'
 
-      click_link 'Add new omelette'
+      click_link 'Add omelette'
 
       expect(page).to have_content("New Omelette Form")
     end
@@ -147,7 +147,7 @@ feature "A user interacts with omelettes" do
     scenario "Add omelette link does not appear unless signed in" do
       visit '/'
 
-      expect(page).to_not have_link("Add new omelette")
+      expect(page).to_not have_link("Add omelette")
     end
   end
 
