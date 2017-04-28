@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
   devise_for :reg_users
 
-  resources :reg_users, only: [:index, :show]
-
-  resources :omelettes, only: [:index, :show, :create, :new, :destroy] do
-    resources :reviews, only: [:new, :create, :edit, :update]
+  resources :reg_users, only: [:index, :show] do
+    resources :reviews, only: [:new, :create, :edit]
+    resources :omelettes, only: [:create, :new, :destroy]
   end
 
   root 'static_pages#index'
@@ -12,7 +11,8 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
 
+      resources :omelettes, only: [:index, :show]
+
     end
   end
-
 end
