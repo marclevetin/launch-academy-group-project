@@ -13,6 +13,7 @@ gem 'fog'
 gem 'fog-aws'
 gem 'active_model_serializers'
 gem 'pry-rails'
+gem 'faker'
 
 group :development do
   gem 'listen', '~> 3.0.5'
@@ -29,7 +30,6 @@ group :development, :test do
   gem 'shoulda-matchers', require: false
   gem 'valid_attribute'
   gem 'dotenv-rails'
-  gem 'faker'
 end
 
 group :test do
