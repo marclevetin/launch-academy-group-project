@@ -18,18 +18,14 @@
 
  body {
 
-      background: linear-gradient(cornflowerblue, white);
-
-
-
-
-
+      background: cornflowerblue;
 
  }
 
  .top-bar {
    background-image: url("https://m.popkey.co/a86232/16bE8.gif");
        background-color: #cccccc;
+       min-width: 600px;
 }
 
 
@@ -79,25 +75,14 @@
     height: 150px;
 }
 
-.parallax {
-    /* The image used */
-    background-image: url("img_parallax.jpg");
 
-    /* Set a specific height */
-    height: 500px;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 .center {
     margin: auto;
     width: 25%;
-    border: 2px solid black;
+
     padding: 10px;
+    min-width: 600px;
 }
 .centertwo {
     margin: auto;

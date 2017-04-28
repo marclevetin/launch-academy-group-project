@@ -3,6 +3,8 @@ import { Link } from 'react-router';
 
 const ReviewTile = (props) => {
   return(
+  
+    <div className="center">
   <div className="review row">
     <div className="review-header">
       <div className="review-user 6 columns">
@@ -12,10 +14,12 @@ const ReviewTile = (props) => {
         <span>{props.created_at}</span>
       </div>
     </div>
+    </div>
 
     <div className="review-body">
       <p>{props.body}</p>
     </div>
+
   </div>
   )
 }
