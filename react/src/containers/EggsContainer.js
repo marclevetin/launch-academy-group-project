@@ -32,7 +32,7 @@ class EggsContainer extends Component {
   }
 
   render() {
-  
+
     let newEggs = this.state.eggs.map((egg) => {
       return (
         <Eggstile

@@ -54,6 +54,8 @@ class OmeletteShow extends Component {
     }
 
     return(
+
+
       <div className="omelette-show center">
         <div className="omelette-show-tile">
           <div className="omelette-show-title">
@@ -62,6 +64,7 @@ class OmeletteShow extends Component {
           <div className="omelette-show-image">
             <img src={photo} />
           </div>
+
           <div className="omelette-show-description">
             {this.state.omelette.description}
           </div>
@@ -69,8 +72,9 @@ class OmeletteShow extends Component {
           </div>
         </div>
         <div className="reviews">
+        <h1>Reviews!</h1>
           {reviews}
-        </div>
+      </div>
       </div>
     )
   }
