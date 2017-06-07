@@ -11,4 +11,4 @@ class Api::ApiController < ApplicationController
   def render_object_errors(object)
     render json: { errors: object.errors }, status: :unprocessable_entity
   end
-end
+end 
